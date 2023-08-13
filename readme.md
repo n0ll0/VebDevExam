@@ -1,4 +1,4 @@
-### VebDev
+# VebDev
 
 ## Backend
 
@@ -8,7 +8,7 @@ Will write outside **views** dir
 
 Will write inside **views** dir and inside **public**
 
-# Comment
+### Comment
 
 To initialize such project I used this link:
 https://expressjs.com/en/starter/generator.html
