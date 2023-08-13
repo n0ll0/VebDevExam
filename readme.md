@@ -25,4 +25,5 @@ https://expressjs.com/en/starter/generator.html
 - The web store API should use JSON as the data format. It should also implement authentication and authorization mechanisms to protect the data and the transactions.
 
 ### Example
+
 https://pood.stalla.ee
