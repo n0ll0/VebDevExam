@@ -6,12 +6,26 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "node-sass-middleware": "0.11.0"
-  }
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^7.4.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  },
+  "description": "Will write outside **views** dir",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n0ll0/VebDevExam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n0ll0/VebDevExam/issues"
+  },
+  "homepage": "https://github.com/n0ll0/VebDevExam#readme"
 }

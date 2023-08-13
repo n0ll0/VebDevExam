@@ -1,12 +1,22 @@
+'use strict';
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var sassMiddleware = require("node-sass-middleware");
+
+/**
+ * the database thing, but uh you gotta create your own cluster somewhere
+ * const mongoose = require('mongoose');
+ * 
+ * this will go elsewhere on a specific route, that will use this requirement
+ * const Stripe = require('stripe');
+ * const stripe = Stripe(something from env);
+ */
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+const strict = require("assert/strict");
 
 var app = express();
 
@@ -18,14 +28,6 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(
-  sassMiddleware({
-    src: path.join(__dirname, "public"),
-    dest: path.join(__dirname, "public"),
-    indentedSyntax: true, // true = .sass and false = .scss
-    sourceMap: true,
-  })
-);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
