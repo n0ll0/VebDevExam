@@ -4,7 +4,5 @@ fetch("/users", {
 })
   .then((res) => res.json())
   .then(async (res) => {
-    document.getElementById("thingamabob").innerText = await JSON.stringify(
-      res
-    );
+    document.getElementById("thingamabob").innerText = JSON.stringify(res);
   });
