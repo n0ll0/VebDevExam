@@ -23,3 +23,6 @@ https://expressjs.com/en/starter/generator.html
 - The orders endpoint should allow the API to create, retrieve and update orders. Each order should have a customer ID, a list of product IDs, a total amount, a status and a date.
 - The payments endpoint should allow the API to process payments for orders. Each payment should have an order ID, a payment method, a card number, an expiration date and a CVV code.
 - The web store API should use JSON as the data format. It should also implement authentication and authorization mechanisms to protect the data and the transactions.
+
+### Example
+https://pood.stalla.ee
