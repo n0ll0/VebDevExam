@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <%- include('./partials/header.ejs') %>
-    <main>
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
-      <span id="thingamabob"></span>
-    </main>
-    <script src="/javascripts/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NeinBolt</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+  
+	<header>
+
+    <a class="logo" href="https://vebdev-nein.karlpariis.repl.co/">
+      <img src="/assets/header/logo.svg">
+    </a>
+
+    <div class="menu">
+      
+      <a href="product.html">Scooters</a>
+      <a href="#">Shop</a>
+      <a href="#">FAQ</a>
+      <a href="signin.html">Sign In</a>
+  
+    </div>
+
+	</header>
+
+	<main>
+
+    <div class="maintext">
+      
+      <h1> World-class design & high-tech innovation</h1>
+      
+      <h3> Use NeinBolt scooters for your daily commute and to explore cities around the world.</h3>
+
+      <a class="buynow" href="#">Buy one NOW</a>
+    </div>
+
+    <img class="mainscooters" src="/assets/main/mainscooters.svg" />
+  
+  </main>
+
+  <footer >
+    
+  </footer>
+</body>
+
 </html>
