@@ -4,62 +4,51 @@
   font-family: Satoshi Variable;
   max-width: 100%;
 }
-
 body {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
-
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 2%;
 }
-
-
 .menu {
   display: flex;
   text-decoration: none;
-  color: black;
+  color: #000;
   justify-content: space-between;
   width: 25%;
 }
-
 a {
   text-decoration: none;
   color: inherit;
   font-size: 24px;
 }
-
 a:hover {
-  color: #34BB78;
+  color: #34bb78;
 }
-
 main {
   display: flex;
   margin-top: 15%;
   align-items: center;
   justify-content: space-evenly;
 }
-
 .maintext {
   display: flex;
   flex-direction: column;
   width: 30%;
   gap: 15px;
 }
-
 h1 {
   font-size: 64px;
 }
-
 .buynow {
   font-size: 32px;
-  color: #34BB78;
+  color: #34bb78;
 }
-
 h3 {
   font-size: 24px;
 }
