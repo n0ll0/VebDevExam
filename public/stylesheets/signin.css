@@ -1,0 +1,14 @@
+
+
+header {
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+  }
+  
+  main {
+    display: flex;
+    justify-items: center;
+    margin-top: 250px;
+    
+  }

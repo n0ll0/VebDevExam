@@ -5,13 +5,13 @@
   max-width: 100%;
 }
 
-body {
+body{
   display: flex;
   justify-content: space-around;
   flex-direction: column;
 }
 
-header {
+header{
   display: flex;
   align-items: center;
   justify-content: space-around;
