@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Satoshi Variable;
+  font-family: "Dongle", sans-serif;
+  font-weight: bold;
   max-width: 100%;
 }
 body {

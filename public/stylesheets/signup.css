@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Dongle", sans-serif;
+    font-weight: normal;
+    max-width: 100%;
+  }
+
+header {
+    display: flex;
+    margin-top: 2%;
+    justify-content: center;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  a {
+    color: #34BB78;
+  }
+  
+  .signup {
+    border: none;
+    background-color: #34BB78;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  input {
+    border: none;
+    border-bottom: 2px solid #34BB78;
+  }
+  
+  input:focus {
+    outline: none;
+  }

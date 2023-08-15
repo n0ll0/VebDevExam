@@ -18,22 +18,21 @@
     <form class="signinform" action="">
 
       <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <h2> Sign in to NeinBolt</h2>
     
-        <label for="psw"><b>Password</b></label>
+        <input type="text" placeholder="Email" name="email" required>
+
         <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <span class="trouble"><a href="#">Trouble logging in?</a></span>
     
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember me
-        </label>
+        <button class="signin" type="submit">Sign in</button>
+
+        <span class="signup"><a href="signup">Don't have an account? Sign up</a></span>
+
       </div>
     
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
-      </div>
     </form>
 
   </main>
