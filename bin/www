@@ -4,6 +4,7 @@
  * Module dependencies.
  */
 
+const { log } = require('console');
 var app = require('../app');
 var debug = require('debug')('vebdevexam:server');
 var http = require('http');
