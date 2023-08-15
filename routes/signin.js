@@ -23,7 +23,7 @@ async function run() {
     await client.close();
   }
 }
-run().catch(console.dir);
+run();
 
 /* GET home page. */
 router.get("/signin", function (req, res, next) {
