@@ -9,10 +9,10 @@ const dataTemplate = {
     password: String,
     name: String,
     number: Number,
-    adress: String,
+    address: String,
 };
 
-const UserSchema = mongoose.model("user", dataTemplate);
+const UserSchema = mongoose.model("users", dataTemplate);
 
 /* POST sign in page. */
 router.post("/signin", function (req, res) {
@@ -31,12 +31,12 @@ router.post("/signup", function (req, res) {
             password: req.body.psw,
             name: req.body.name,
             number: req.body.numb,
-            adress: req.body.adr,
+            address: req.body.adr,
         };
         let user = new UserSchema(le_obj);
 
         user.save().then(() => {
-            console.log("new user created!\r\n", JSON.stringify(le_obj));
+            console.log("new user created!\r\n", JSON.stringify(le_obj,));
         });
     } catch (error) {
         console.error("Error:", error);
