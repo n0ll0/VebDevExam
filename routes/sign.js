@@ -26,17 +26,17 @@ router.post("/signin", function (req, res) {
 /* POST sign up page. */
 router.post("/signup", function (req, res) {
     try {
-        const le_obj = {
+        const userData = {
             email: req.body.email,
             password: req.body.psw,
             name: req.body.name,
             number: req.body.numb,
             adress: req.body.adr,
         };
-        let user = new UserSchema(le_obj);
+        let user = new UserSchema(userData);
 
         user.save().then(() => {
-            console.log("new user created!\r\n", JSON.stringify(le_obj));
+            console.log("new user created!\r\n", JSON.stringify(userData));
         });
     } catch (error) {
         console.error("Error:", error);
