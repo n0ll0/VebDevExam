@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NeinBolt</title>
     <link href="/stylesheets/signup.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <%- include("./partials/header.ejs", menu=false) %>
 
     <main>
+      <form class="signupform" method="post" action="/signup">
+        <div class="container">
+          <h2>Sign up to NeinBolt</h2>
 
-        <form class="signupform" action="">
+          <input type="text" placeholder="Email" name="email" required />
 
-            <div class="container">
-      
-              <h2> Sign up to NeinBolt</h2>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
 
-              <input type="text" placeholder="Email" name="email" required>
-          
-              <input type="password" placeholder="Enter Password" name="psw" required>
+          <input type="text" placeholder="Full name" name="name" required />
 
-              <input type="text" placeholder="Full name" name="name" required>
+          <input
+            type="number"
+            min="0"
+            placeholder="Phone number"
+            name="numb"
+            required
+          />
 
-              <input type="number" min="0" placeholder="Phone number" name="numb" required>
+          <input type="text" placeholder="Address" name="adr" required />
 
-              <input type="text" placeholder="Address" name="adr" required>
-          
-              <button class="signup" type="submit">Sign up</button>
-      
-              <span class="signin"><a href="signin">Already have an account? Sign in</a></span>
-      
-            </div>
-          
-          </form>
+          <button class="signup" type="submit">Sign up</button>
 
-
+          <span class="signin"
+            ><a href="signin">Already have an account? Sign in</a></span
+          >
+        </div>
+      </form>
     </main>
-
-</body>
+  </body>
 </html>
