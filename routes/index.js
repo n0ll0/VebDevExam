@@ -1,5 +1,5 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri = process.env.MONGO_URI;
@@ -74,15 +74,23 @@ const Data = mongoose.model("Data", notesSchema);
 
 /* POST sign up page. */
 router.post("/signup", function (req, res) {
-  let formData = new Data({
-    email: req.body.email, 
-    password: req.body.psw,
-    name: req.body.name,
-    number: req.body.numb,
-    adress: req.body.adr,
-  });
-  formData.save();
-  res.redirect("/");
-})
+
+  try {
+
+    let formData = new Data({
+      email: req.body.email, 
+      password: req.body.psw,
+      name: req.body.name,
+      number: req.body.numb,
+      adress: req.body.adr,
+    });
+
+    formData.save();
+    res.redirect("/");
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 module.exports = router;
