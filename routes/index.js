@@ -62,7 +62,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.connect("mongodb+srv://VebDevDB:Vebdev!1234@veb.06bmvaj.mongodb.net/UserData", {useNewUrlParser: true}, {useUnifiedTopology: true});
 
-const notesSchema = {
+const dataTemplate = {
   email: String,
   password: String,
   name: String,
@@ -70,7 +70,7 @@ const notesSchema = {
   adress: String,
 }
 
-const Data = mongoose.model("Data", notesSchema);
+const Data = mongoose.model("Data", dataTemplate);
 
 /* POST sign up page. */
 router.post("/signup", function (req, res) {
