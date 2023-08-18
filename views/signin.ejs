@@ -12,7 +12,7 @@
     <%- include("./partials/header.ejs", menu=false) %>
 
     <main>
-      <form class="signinform" action="">
+      <form class="signinform" method="post" action="/signin">
         <div class="container">
           <h2>Sign in to NeinBolt</h2>
 
@@ -21,7 +21,7 @@
           <input
             type="password"
             placeholder="Enter Password"
-            name="psw"
+            name="password"
             required
           />
 

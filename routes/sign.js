@@ -15,11 +15,27 @@ const dataTemplate = {
 const UserSchema = mongoose.model("users", dataTemplate);
 
 /* POST sign in page. */
-router.post("/signin", function (req, res) {
+router.post("/signin", async function (req, res) {
     try {
-    } catch (e) {
-        console.log(e.message);
+        const { email, password } = req.body;
+
+        const user = await UserSchema.findOne({ email:email });
+        if (!user) {
+            console.log("User");
+            return res.status(401).send("Invalid credentials")
+        }
+
+        if (password != user.password) {
+            console.log("pass");
+            return res.status(401).send("Invalid credentials")
+        }
+
+        // Sign in result
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).send("Internal Server Error");
     }
+
     res.render("index", { title: "Express" });
 });
 
