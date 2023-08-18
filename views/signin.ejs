@@ -1,65 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>NeinBolt</title>
-        <link href="/stylesheets/signin.css" rel="stylesheet" type="text/css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeinBolt</title>
+    <link href="/stylesheets/signin.css" rel="stylesheet" type="text/css" />
+  </head>
 
-    <body>
-        <%- include("./partials/header.ejs", menu=false) %>
+  <body>
+    <%- include("./partials/header.ejs", menu=false) %>
 
-<<<<<<< HEAD
     <main>
       <form class="signinform" method="post" action="/signin">
         <div class="container">
           <h2>Sign in to NeinBolt</h2>
-=======
-        <main>
-            <form class="signinform" action="">
-                <div class="container">
-                    <h2>Sign in to NeinBolt</h2>
->>>>>>> e6fee217881656346df85bb13844a55611fb3b89
 
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        name="email"
-                        required
-                    />
+          <input type="text" placeholder="Email" name="email" required />
 
-<<<<<<< HEAD
           <input
             type="password"
             placeholder="Enter Password"
             name="password"
             required
           />
-=======
-                    <input
-                        type="password"
-                        placeholder="Enter Password"
-                        name="psw"
-                        required
-                    />
->>>>>>> e6fee217881656346df85bb13844a55611fb3b89
 
-                    <span class="trouble"
-                        ><a href="#">Trouble logging in?</a></span
-                    >
+          <span class="trouble"><a href="#">Trouble logging in?</a></span>
 
-                    <button class="signin" type="submit">Sign in</button>
+          <button class="signin" type="submit">Sign in</button>
 
-                    <span class="signup"
-                        ><a href="signup"
-                            >Don't have an account? Sign up</a
-                        ></span
-                    >
-                </div>
-            </form>
-        </main>
-        <%- include("./partials/footer.ejs")%>
-    </body>
+          <span class="signup"
+            ><a href="signup">Don't have an account? Sign up</a></span
+          >
+        </div>
+      </form>
+    </main>
+    <%- include("./partials/footer.ejs")%>
+  </body>
 </html>
