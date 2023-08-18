@@ -1,66 +1,47 @@
-<!DOCTYPE html>
+rs<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>NeinBolt</title>
-        <link href="/stylesheets/signup.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-        <%- include("./partials/header.ejs", menu=false) %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeinBolt</title>
+    <link href="/stylesheets/signup.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs", menu=false) %>
 
-        <main>
-            <form class="signupform" method="post" action="/signup">
-                <div class="container">
-                    <h2>Sign up to NeinBolt</h2>
+    <main>
+      <form class="signupform" method="post" action="/signup">
+        <div class="container">
+          <h2>Sign up to NeinBolt</h2>
 
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        name="email"
-                        required
-                    />
+          <input type="text" placeholder="Email" name="email" required />
 
-                    <input
-                        type="password"
-                        placeholder="Enter Password"
-                        name="psw"
-                        required
-                    />
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
 
-                    <input
-                        type="text"
-                        placeholder="Full name"
-                        name="name"
-                        required
-                    />
+          <input type="text" placeholder="Full name" name="name" required />
 
-                    <input
-                        type="number"
-                        min="0"
-                        placeholder="Phone number"
-                        name="numb"
-                        required
-                    />
+          <input
+            type="number"
+            min="0"
+            placeholder="Phone number"
+            name="numb"
+            required
+          />
 
-                    <input
-                        type="text"
-                        placeholder="Address"
-                        name="adr"
-                        required
-                    />
+          <input type="text" placeholder="Address" name="adr" required />
 
-                    <button class="signup" type="submit">Sign up</button>
+          <button class="signup" type="submit">Sign up</button>
 
-                    <span class="signin"
-                        ><a href="signin"
-                            >Already have an account? Sign in</a
-                        ></span
-                    >
-                </div>
-            </form>
-        </main>
-
-        <%- include("./partials/footer.ejs")%>
-    </body>
+          <span class="signin"
+            ><a href="signin">Already have an account? Sign in</a></span
+          >
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
