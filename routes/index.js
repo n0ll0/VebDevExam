@@ -17,6 +17,10 @@ router.get("/signup", function (req, res) {
   res.render("signup");
 });
 
+/* GET browse page. */
+router.get("/browse", function (req, res) {
+  res.render("browse");
+});
 
 
 module.exports = router;

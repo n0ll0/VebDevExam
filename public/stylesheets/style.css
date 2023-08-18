@@ -53,3 +53,30 @@ h1 {
 h3 {
   font-size: 24px;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signinbut {
+  color: #34BB78;
+}
+
+.signup {
+  border: none;
+  background-color: #34BB78;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #34BB78;
+}
+
+input:focus {
+  outline: none;
+}

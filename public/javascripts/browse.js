@@ -4,7 +4,11 @@ browse.oninput = function () {
         .then((r) => {
             r.forEach((e) => {
                 product_list.appendChild(
-                    `<a href="/product/${e._id}"><img src="e.img" alt="e.title"/><span>${e.title}</span></a>`
+                    `<div class="product-card">
+                        <img class="product-img" src="/images/product/scooter1.svg">
+                        <h3 class="product-title">Scooter doggo</h3>
+                        <p class="product-price">299.99€</p>
+                    </div>`
                 );
             });
         });
