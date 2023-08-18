@@ -1,8 +1,8 @@
 "use strict";
 const express = require("express");
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGO_URI);
 const router = express.Router();
+mongoose.connect(process.env.MONGO_URI);
 
 const dataTemplate = {
     email: String,
