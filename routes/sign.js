@@ -1,10 +1,11 @@
 "use strict";
+const { log } = require("console");
 const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 mongoose.connect(process.env.MONGO_URI);
 
-const dataTemplate = {
+const UserTemplate = {
     email: String,
     password: String,
     name: String,
@@ -12,22 +13,29 @@ const dataTemplate = {
     address: String,
 };
 
-const UserSchema = mongoose.model("users", dataTemplate);
+const ProductTemplate = {
+    title: String,
+    price: Number,
+    img: String,
+};
+
+const UserSchema = mongoose.model("users", UserTemplate);
+const ProductSchema = mongoose.model("products", ProductTemplate);
 
 /* POST sign in page. */
 router.post("/signin", async function (req, res) {
     try {
         const { email, password } = req.body;
 
-        const user = await UserSchema.findOne({ email:email });
+        const user = await UserSchema.findOne({ email: email });
         if (!user) {
             console.log("User");
-            return res.status(401).send("Invalid credentials")
+            return res.status(401).send("Invalid credentials");
         }
 
         if (password != user.password) {
             console.log("pass");
-            return res.status(401).send("Invalid credentials")
+            return res.status(401).send("Invalid credentials");
         }
 
         // Sign in result
@@ -62,9 +70,14 @@ router.post("/signup", function (req, res) {
 });
 
 /* POST browse page. */
-router.post("/browse", async(res,req)=>{
-    res.send("stuff from db")
-})
-
+router.post("/browse", async (req, res) => {
+    try {
+        res.status(200).send(await ProductSchema.find({ title: { $regex: req.body.search } }));
+        return
+    } catch (e) {
+        res.status(401).send([{img:"urmom", title:"no", price:0}]);
+        console.log(e.message);
+    }
+});
 
 module.exports = router;
